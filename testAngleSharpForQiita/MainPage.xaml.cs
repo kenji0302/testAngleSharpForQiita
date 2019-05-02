@@ -36,8 +36,8 @@ namespace testAngleSharpForQiita
             //submit
             var document = await context.Active.Forms[0].SubmitAsync(new
             {
-                identity = "Qiitaのユーザー名またはメールアドレス",
-                password = "Qiitaのパスワード"
+                identity = username.Text,
+                password = password.Text
             });
 
             //ログイン後のURL表示
@@ -47,6 +47,9 @@ namespace testAngleSharpForQiita
             var notifications = document.QuerySelector(".st-Header_notifications");
 
             Console.WriteLine(notifications.InnerHtml);
+
+            await DisplayAlert(null, "未読通知は" + notifications.InnerHtml + "件です", "OK");
+
         }
     }
 }

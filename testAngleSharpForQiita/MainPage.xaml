@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:testAngleSharpForQiita" x:Class="testAngleSharpForQiita.MainPage">
-    <StackLayout>
-        <Button Clicked="Handle_ClickedAsync" Text="取得" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+    <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+        <Entry Placeholder="ユーザー名またはメールアドレス" x:Name="username" Keyboard="Email"></Entry>
+        <Entry Placeholder="パスワード" x:Name="password" IsPassword="true"></Entry>
+        <Button Clicked="Handle_ClickedAsync" Text="取得"  />
     </StackLayout>
 </ContentPage>
